@@ -131,8 +131,12 @@ nav .fa{
 .plats h1{
     font-size: 32px;
 }
+
+.titreFiltre{
+    margin-top: 3%;
+}
 .row{
-    margin-top: 5%;
+    margin-top: 2%;
     display: flex;
     justify-content: space-between;
 }
@@ -331,7 +335,10 @@ select {
     }
 }
 
-
+#prixPr{
+    margin-bottom: 10px;
+    font-weight: 700;
+}
 .menu-col{
     flex-basis: 31%;
     background: rgba(232, 232, 232, 1);

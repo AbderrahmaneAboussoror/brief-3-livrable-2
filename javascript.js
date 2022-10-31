@@ -63,7 +63,7 @@ function test(){
 
 //panier
 var panier= document.getElementById("menuPanier");
-var cocaqu = 1, sevenqu = 1, pepsiqu = 1, salade1qu = 1, salade2qu = 1, salade3qu = 1;
+var cocaqu = 1, sevenqu = 1, pepsiqu = 1, salade1qu = 1, salade2qu = 1, salade3qu = 1, totalP = 0;
 
 function coca(){
     var coc = document.querySelectorAll("#cocaCola");
@@ -79,6 +79,7 @@ function coca(){
     text1.innerText = "CocaCola";
     text2.innerText = "x"+cocaqu;
     text3.innerText = "15Dh";
+    totalP += 15;
     div.appendChild(text1);
     div.appendChild(text2);
     div.appendChild(text3);
@@ -100,6 +101,7 @@ function sevenup(){
     text1.innerText = "7up";
     text2.innerText = "x"+sevenqu;
     text3.innerText = "17Dh";
+    totalP += 17;
     div.appendChild(text1);
     div.appendChild(text2);
     div.appendChild(text3);
@@ -121,6 +123,7 @@ function pepsi(){
     text1.innerText = "Pepsi";
     text2.innerText = "x"+pepsiqu;
     text3.innerText = "20Dh";
+    totalP+=20;
     div.appendChild(text1);
     div.appendChild(text2);
     div.appendChild(text3);
@@ -142,6 +145,7 @@ function salade1(){
     text1.innerText = "Salade Mexicaine";
     text2.innerText = "x"+salade1qu;
     text3.innerText = "30Dh";
+    totalP+=30;
     div.appendChild(text1);
     div.appendChild(text2);
     div.appendChild(text3);
@@ -162,7 +166,8 @@ function salade2(){
     var text3 = document.createElement("h3");
     text1.innerText = "Salade Hawaienne";
     text2.innerText = "x"+salade2qu;
-    text3.innerText = "30Dh";
+    text3.innerText = "40Dh";
+    totalP += 40;
     div.appendChild(text1);
     div.appendChild(text2);
     div.appendChild(text3);
@@ -183,10 +188,16 @@ function salade3(){
     var text3 = document.createElement("h3");
     text1.innerText = "Salade Niçoise";
     text2.innerText = "x"+salade3qu;
-    text3.innerText = "30Dh";
+    text3.innerText = "25Dh";
+    totalP += 25;
     div.appendChild(text1);
     div.appendChild(text2);
     div.appendChild(text3);
     panier.appendChild(div);
     salade3qu++;
+}
+
+//total
+function total(){
+    alert(totalP);
 }
